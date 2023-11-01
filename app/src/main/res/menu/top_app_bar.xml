@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/themeChange"
+        android:icon="@drawable/baseline_dark_mode_24"
+        android:contentDescription="Theme Change"
+        app:showAsAction="ifRoom"
+        android:title="Theme Change" />
+
+    <item
+        android:id="@+id/deleteAll"
+        android:title="Delete"
+        android:icon="@drawable/baseline_delete_forever_24"
+        android:contentDescription="delete_all_data"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/more"
+        android:title="Previous Data"
+        android:contentDescription="content_description_more"
+        app:showAsAction="never" />
+</menu>

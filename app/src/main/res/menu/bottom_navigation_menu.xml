@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/textScan"
+        android:enabled="true"
+        android:title="Text Scan"
+        android:state_checked = "true"
+        android:icon="@drawable/baseline_document_scanner_24"
+        />
+
+    <item
+        android:id="@+id/translateText"
+        android:enabled="true"
+        android:title="Translate"
+        android:icon="@drawable/baseline_translate_24"
+        />
+</menu>
