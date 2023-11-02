@@ -1,4 +1,4 @@
-package com.example.textandtranslate;
+package com.example.textscanandtranslate.feature.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

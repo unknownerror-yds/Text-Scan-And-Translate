@@ -13,14 +13,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-                <TextView
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/timeStampView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
                     android:padding="8dp" />
 
-                <TextView
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

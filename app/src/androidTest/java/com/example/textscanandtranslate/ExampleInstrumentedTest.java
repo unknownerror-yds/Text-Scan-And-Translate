@@ -1,4 +1,4 @@
-package com.example.textandtranslate;
+package com.example.textscanandtranslate;
 
 import android.content.Context;
 

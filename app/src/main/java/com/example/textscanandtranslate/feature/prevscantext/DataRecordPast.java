@@ -1,25 +1,25 @@
-package com.example.textandtranslate;
+package com.example.textscanandtranslate.feature.prevscantext;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.textandtranslate.R;
+import com.example.textscanandtranslate.feature.db.DataBaseHelper;
 import com.google.android.material.appbar.MaterialToolbar;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.textscanandtranslate.feature.db.TextPojo;
 
 public class DataRecordPast extends AppCompatActivity {
     private DataBaseHelper databaseHelper;

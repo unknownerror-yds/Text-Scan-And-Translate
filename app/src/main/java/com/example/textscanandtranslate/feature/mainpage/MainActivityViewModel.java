@@ -1,4 +1,4 @@
-package com.example.textandtranslate;
+package com.example.textscanandtranslate.feature.mainpage;
 
 import androidx.lifecycle.ViewModel;
 

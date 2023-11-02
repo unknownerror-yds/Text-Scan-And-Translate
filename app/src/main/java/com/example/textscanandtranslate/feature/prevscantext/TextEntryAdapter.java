@@ -1,4 +1,4 @@
-package com.example.textandtranslate;
+package com.example.textscanandtranslate.feature.prevscantext;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,19 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.textandtranslate.R;
+import com.example.textscanandtranslate.feature.db.TextPojo;
+import com.example.textscanandtranslate.feature.translatepage.Translate;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
-import java.util.Locale;
 
 public class TextEntryAdapter extends RecyclerView.Adapter<TextEntryAdapter.TextEntryViewHolder> {
-    private List<TextPojo> textEntries;
-    private Context context;
+    private final List<TextPojo> textEntries;
+    private final Context context;
 
     public TextEntryAdapter(List<TextPojo> textEntries,Context context) {
         this.textEntries = textEntries;
@@ -43,9 +44,9 @@ public class TextEntryAdapter extends RecyclerView.Adapter<TextEntryAdapter.Text
     }
 
     public class TextEntryViewHolder extends RecyclerView.ViewHolder {
-        private TextView textView;
-        private TextView timeStampView;
-        private MaterialButton translate;
+        private final TextInputEditText textView;
+        private final TextInputEditText timeStampView;
+        private final MaterialButton translate;
         public TextEntryViewHolder(View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.textTextView);
@@ -71,7 +72,7 @@ public class TextEntryAdapter extends RecyclerView.Adapter<TextEntryAdapter.Text
             textView.setText(entry.getText());
 //            SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy HH:mm", Locale.getDefault());
 //            String formattedTimestamp = dateFormat.format(entry.getTimestampDate());
-            timeStampView.setText(entry.getTimestamp());
+            timeStampView.setText(timeStampView.getText() + entry.getTimestamp());
         }
     }
 

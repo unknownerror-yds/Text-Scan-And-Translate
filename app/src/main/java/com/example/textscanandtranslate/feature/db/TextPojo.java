@@ -1,4 +1,4 @@
-package com.example.textandtranslate;
+package com.example.textscanandtranslate.feature.db;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
