@@ -1,4 +1,4 @@
-package com.example.textandtranslate;
+package com.example.textscanandtranslate.feature.translatepage;
 
 import android.app.Application;
 import android.util.LruCache;
@@ -8,6 +8,8 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
+
+import com.example.textandtranslate.R;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;

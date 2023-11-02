@@ -1,12 +1,11 @@
-package com.example.textandtranslate;
+package com.example.textscanandtranslate.feature.translatepage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toolbar;
 
-import com.google.android.material.appbar.MaterialToolbar;
+import com.example.textandtranslate.R;
 
 public class Translate extends AppCompatActivity {
 

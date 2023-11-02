@@ -1,4 +1,4 @@
-package com.example.textandtranslate;
+package com.example.textscanandtranslate.feature.mainpage;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -11,18 +11,20 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import com.example.textandtranslate.R;
+import com.example.textscanandtranslate.feature.prevscantext.DataRecordPast;
+import com.example.textscanandtranslate.feature.translatepage.Translate;
+import com.example.textscanandtranslate.feature.db.DataBaseHelper;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -68,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         databaseHelper = new DataBaseHelper(this);
         toolbar = findViewById(R.id.topAppBar);
-//      toolbar.inflateMenu(R.menu.top_app_bar);
 
         mainActivityViewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
 
@@ -134,12 +135,10 @@ public class MainActivity extends AppCompatActivity {
                 // You can also handle the button click here directly.
                 // Add your logic here.
                 // Toggle between light and dark themes
-
-
                 return true;
             }
             if(item.getItemId() == R.id.more){
-                Intent intent = new Intent(this,DataRecordPast.class);
+                Intent intent = new Intent(this, DataRecordPast.class);
                 startActivity(intent);
             }
             return false;
@@ -160,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
             db.insert(DataBaseHelper.TABLE_NAME, null, values);
             db.close();
 
-            //inputText.setText(""); // Clear the input field
         }
     }
 
@@ -171,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //check if the app has persmission...
+    //check if the app has permission...
     private boolean hasStoragePermission() {
         int permission = ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE);
         return permission == PermissionChecker.PERMISSION_GRANTED;
