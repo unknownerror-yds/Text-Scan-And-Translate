@@ -14,6 +14,7 @@ import com.example.textandtranslate.R;
 import com.example.textscanandtranslate.feature.db.TextPojo;
 import com.example.textscanandtranslate.feature.translatepage.Translate;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -46,8 +47,8 @@ public class TextEntryAdapter extends RecyclerView.Adapter<TextEntryAdapter.Text
     }
 
     public class TextEntryViewHolder extends RecyclerView.ViewHolder {
-        private final TextView textView;
-        private final TextView timeStampView;
+        private final TextInputEditText textView;
+        private final TextInputEditText timeStampView;
         private final MaterialButton translate;
         public TextEntryViewHolder(View itemView) {
             super(itemView);
