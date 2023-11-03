@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,9 +14,10 @@ import com.example.textandtranslate.R;
 import com.example.textscanandtranslate.feature.db.TextPojo;
 import com.example.textscanandtranslate.feature.translatepage.Translate;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class TextEntryAdapter extends RecyclerView.Adapter<TextEntryAdapter.TextEntryViewHolder> {
     private final List<TextPojo> textEntries;
@@ -44,8 +46,8 @@ public class TextEntryAdapter extends RecyclerView.Adapter<TextEntryAdapter.Text
     }
 
     public class TextEntryViewHolder extends RecyclerView.ViewHolder {
-        private final TextInputEditText textView;
-        private final TextInputEditText timeStampView;
+        private final TextView textView;
+        private final TextView timeStampView;
         private final MaterialButton translate;
         public TextEntryViewHolder(View itemView) {
             super(itemView);
@@ -72,7 +74,7 @@ public class TextEntryAdapter extends RecyclerView.Adapter<TextEntryAdapter.Text
             textView.setText(entry.getText());
 //            SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy HH:mm", Locale.getDefault());
 //            String formattedTimestamp = dateFormat.format(entry.getTimestampDate());
-            timeStampView.setText(timeStampView.getText() + entry.getTimestamp());
+            timeStampView.setText(entry.getTimestamp());
         }
     }
 
